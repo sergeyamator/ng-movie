@@ -1,0 +1,20 @@
+<form action="" name="form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <input type="text"
+               class="form-control"
+               placeholder="Enter you movie here"
+               ng-model="SearchBarController.searchText"
+        >
+      </div>
+      <div class="col-md-2">
+        <button type="reset"
+                class="btn btn-default"
+                ng-click="SearchBarController.clearSearchText()">
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
