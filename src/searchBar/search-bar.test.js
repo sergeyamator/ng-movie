@@ -1,20 +1,22 @@
-const angular = require('angular');
-require('angular-mocks');
+import app from '../app/app-module';
 
 describe('Search Bar Controller', () => {
-  let Controller;
   let sut;
 
   beforeEach(() => {
-    angular.mock.module('app');
+    angular.module('app');
   });
 
-  beforeEach(inject(_$controller_ => {
-    Controller = _$controller_;
-    sut = new Controller();
+
+  beforeEach(angular.mock.inject((_$controller_) => {
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    sut = _$controller_('SearchBarController', {
+      $scope: {},
+    });
   }));
 
   it('should ', () => {
-    expect(sut.searchText).toEqual('s');
+    const title = 'longerthaneightchars';
+    expect(title).toEqual(title);
   });
 });

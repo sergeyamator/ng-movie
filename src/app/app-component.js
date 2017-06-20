@@ -1,7 +1,5 @@
-import angular from 'angular';
 import AppController from './app-controller';
-
-const app = angular.module('app', []);
+import app from './app-module';
 
 app.component('app', {
   templateUrl: 'src/app/app.html',

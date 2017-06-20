@@ -7,7 +7,7 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
     preprocessors: {
-      'src/**/*.test.js': ['webpack', 'sourcemap'],
+      'src/**/*.test.js': ['webpack'],
     },
     webpack: require('./webpack.config.test'),
 
@@ -18,7 +18,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bundle.js',
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'src/**/*.test.js',
     ],
 
 
