@@ -1,22 +1,9 @@
-import app from '../app/app-module';
 import SearchBarController from './searchBarController';
 
 describe('Search Bar Controller', () => {
-  let sut;
+  let sut = new SearchBarController();
 
-  beforeEach(() => {
-    angular.mock.module(app);
-  });
-
-
-  beforeEach(angular.mock.inject((_$controller_) => {
-    // The injector unwraps the underscores (_) from around the parameter names when matching
-    sut = _$controller_(SearchBarController, {
-          $scope: {},
-      });
-  }));
-
-  it('#clearSearchText ', () => {
+  it('#clearSearchText', () => {
     sut.searchText = 'longerthaneightchars';
     sut.clearSearchText();
 
