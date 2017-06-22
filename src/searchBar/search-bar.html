@@ -7,11 +7,11 @@
                placeholder="Enter you movie here"
                ng-model="SearchBarController.searchText"
         >
+        {{SearchBarController.searchText}}
       </div>
       <div class="col-md-2">
         <button type="reset"
-                class="btn btn-default"
-                ng-click="SearchBarController.clearSearchText()">
+                class="btn btn-default">
           Clear
         </button>
       </div>

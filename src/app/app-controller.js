@@ -1,8 +1,17 @@
 export default function () {
   const vm = this;
 
+  Object.assign(vm, {
+    clearSearchText,
+  });
+
   vm.title = 'Find movie';
-  vm.getTitle = function () {
-    return vm.title;
-  };
+
+  vm.searchText = 'ss';
+
+  function clearSearchText() {
+    debugger
+    alert('hi')
+    vm.searchText = '';
+  }
 }
