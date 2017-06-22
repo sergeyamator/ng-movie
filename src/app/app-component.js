@@ -7,4 +7,6 @@ app.component('app', {
   controllerAs: 'AppController',
 });
 
+
+
 export default app;
