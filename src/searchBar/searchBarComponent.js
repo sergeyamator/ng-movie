@@ -7,7 +7,7 @@ app.component('searchBar', {
   controller: SearchBarController,
   controllerAs: 'SearchBarController',
   bindings: {
-    searchText: '@',
+    searchText: '<',
     clearSearchText: '&',
   },
 });

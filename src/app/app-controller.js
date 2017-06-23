@@ -10,8 +10,6 @@ export default function () {
   vm.searchText = 'ss';
 
   function clearSearchText() {
-    debugger
-    alert('hi')
     vm.searchText = '';
   }
 }
