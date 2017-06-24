@@ -8,7 +8,6 @@ import SearchBarController from './search-bar-controller';
 app.component('searchBar', {
   controller: SearchBarController,
   controllerAs: 'SearchBarController',
-  templateUrl: 'src/search-bar/search-bar.html',
   bindings: {
     searchText: '=',
     movies: '=',
