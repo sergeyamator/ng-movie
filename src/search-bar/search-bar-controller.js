@@ -1,3 +1,4 @@
+import './search-bar.css';
 
 export default function (movieService) {
   const vm = this;
@@ -16,5 +17,6 @@ export default function (movieService) {
 
   function clearSearchText() {
     vm.searchText = '';
+    vm.movies = [];
   }
 }

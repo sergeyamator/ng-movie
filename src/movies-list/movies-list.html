@@ -1,0 +1,13 @@
+<section>
+  <div class="row">
+    <div class="container container-flex">
+      <article class="movie"
+               ng-repeat="movie in MoviesController.movies">
+
+        <img ng-src="{{'http://image.tmdb.org/t/p/w185' + movie.poster_path}}" alt="">
+        <h2>{{movie.name}}</h2>
+
+      </article>
+    </div>
+  </div>
+</section>
