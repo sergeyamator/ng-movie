@@ -1,3 +1,4 @@
+import './search-bar.css';
 
 
 export default function (movieService) {
