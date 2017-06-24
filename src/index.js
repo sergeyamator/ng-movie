@@ -1,4 +1,5 @@
 import './app/app-component';
-import './searchBar/searchBarComponent';
 
+import './search-bar/search-bar-component';
+import './search-bar/search-bar-service';
 import './styles.css';

@@ -6,8 +6,8 @@
                class="form-control"
                placeholder="Enter you movie here"
                ng-model="SearchBarController.searchText"
+               ng-change="SearchBarController.getVideo(SearchBarController.searchText)"
         >
-        {{SearchBarController.searchText}}
       </div>
       <div class="col-md-2">
         <button type="reset"

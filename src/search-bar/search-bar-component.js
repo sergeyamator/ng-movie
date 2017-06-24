@@ -1,13 +1,13 @@
 import app from '../app/app-component';
 
-import SearchBarController from './searchBarController';
+import SearchBarController from './search-bar-controller';
 
 app.component('searchBar', {
-  templateUrl: 'src/searchBar/search-bar.html',
+  templateUrl: 'src/search-bar/search-bar.html',
   controller: SearchBarController,
   controllerAs: 'SearchBarController',
   bindings: {
-    searchText: '<',
-    clearSearchText: '&',
+    searchText: '=',
+    movies: '=',
   },
 });

@@ -1,7 +1,7 @@
-import SearchBarController from './searchBarController';
+import SearchBarController from './search-bar-controller';
 
 describe('Search Bar Controller', () => {
-  let sut = new SearchBarController();
+  const sut = new SearchBarController();
 
   it('#clearSearchText', () => {
     sut.searchText = 'longerthaneightchars';
