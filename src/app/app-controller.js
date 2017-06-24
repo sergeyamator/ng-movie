@@ -7,5 +7,5 @@ export default function () {
   vm.title = 'Find movie';
 
   vm.searchText = '';
-  vm.movies = [];
+  vm.movies = 'a';
 }
