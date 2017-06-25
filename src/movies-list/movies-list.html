@@ -3,7 +3,7 @@
     <div class="container container-flex">
       <article
         class="movie"
-        ng-repeat="movie in MoviesController.movies"
+        ng-repeat="movie in MoviesController.movies track by movie.id"
       >
         <img ng-src="{{'http://image.tmdb.org/t/p/w185' + movie.poster_path}}" alt="">
         <h2>{{movie.name || movie.title}}</h2>

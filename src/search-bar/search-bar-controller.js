@@ -1,23 +1,37 @@
 import './search-bar.css';
 
+class SearchBar {
+  static get $inject() {
+    return ['movie'];
+  }
 
-export default function (movieService) {
-  const vm = this;
+  constructor(movie) {
+    this.movie = movie;
+  }
 
-  Object.assign(vm, {
-    clearSearchText,
-    getVideo,
-  });
+  clearSearchText() {
+    this.searchText = '';
+    this.movies = [];
+  }
 
-  function getVideo(text) {
-    movieService.getVideoByText(text)
-      .then(({ data }) => {
-        vm.movies = data.results;
+  getVideo(text) {
+    this.movie.getVideoByText(text)
+      .then((movies) => {
+        this.movies = movies;
       });
   }
 
-  function clearSearchText() {
-    vm.searchText = '';
-    vm.movies = [];
-  }
+  // TODO
+  /*  read(value) {
+   this.movies = value.map(v => {
+   return {
+   name: v.title || v.name,
+   src: v.src,
+   id: 'id',
+   };
+   });
+   }*/
 }
+
+export default SearchBar;
+

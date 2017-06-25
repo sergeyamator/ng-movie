@@ -1,5 +1,6 @@
 import app from '../app/app-module';
 import MoviesController from './movies-list-controller';
+import './movies-list-service';
 
 import './movies-list.css';
 
