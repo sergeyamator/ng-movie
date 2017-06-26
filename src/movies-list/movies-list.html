@@ -3,14 +3,14 @@
     <div class="container container-flex">
       <article
         class="movie"
-        ng-repeat="movie in MoviesController.movies track by movie.id"
+        ng-repeat="movie in $ctrl.movies track by movie.id"
       >
         <img ng-src="{{'http://image.tmdb.org/t/p/w185' + movie.poster_path}}" alt="">
         <h2>{{movie.name || movie.title}}</h2>
         <div>{{movie.first_air_date | date : 'yyyy'}}</div>
         <ul class="stars">
           <li class="glyphicon glyphicon-star"
-              ng-repeat="star in MoviesController.getStarsArray(movie.vote_average)">
+              ng-repeat="star in $ctrl.getStarsArray(movie.vote_average)">
           </li>
         </ul>
       </article>

@@ -2,11 +2,10 @@ import app from '../app/app-component';
 
 import './search-bar.css';
 
-import SearchBarController from './search-bar-controller';
+import SearchBarCtrl from './search-bar-controller';
 
 app.component('searchBar', {
-  controller: SearchBarController,
-  controllerAs: 'SearchBarController',
+  controller: SearchBarCtrl,
   templateUrl: 'src/search-bar/search-bar.html',
   bindings: {
     searchText: '=',
