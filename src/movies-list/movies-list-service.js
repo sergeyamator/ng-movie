@@ -3,7 +3,7 @@ import appModule from '../app/app-module';
 
 appModule.service('movie', movie);
 
-function movie($http) {
+export default function movie($http) {
   this.getVideoByText = getVideoByText;
 
   function getVideoByText(text) {

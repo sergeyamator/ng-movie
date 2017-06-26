@@ -17,11 +17,11 @@ class SearchBar {
   getVideo(text) {
     this.movie.getVideoByText(text)
       .then((movies) => {
-        this.read(movies);
+        this.__read(movies);
       });
   }
 
-    read(value) {
+    __read(value) {
         this.movies = value.map(v => {
             return {
                 name: v.name || v.title,

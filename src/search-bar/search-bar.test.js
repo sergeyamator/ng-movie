@@ -2,10 +2,17 @@ import SearchBarController from './search-bar-controller';
 import movieService from '../movies-list/movies-list-service';
 
 describe('Search Bar Controller', () => {
-  const sut = new SearchBarController();
+  const m = new movieService();
+  const sut = new SearchBarController(m);
+  let $q;
+  let $timeout;
 
+  beforeEach(inject((_$q_, _$timeout_) => {
+    $q = _$q_;
+    $timeout = _$timeout_;
+  }));
 
-  it('#clearSearchText', () => {
+    it('#clearSearchText', () => {
     sut.searchText = 'longerthaneightchars';
     sut.clearSearchText();
 
@@ -13,10 +20,14 @@ describe('Search Bar Controller', () => {
   });
 
   it('#getVideo', () => {
-    const result = {
+    const result = [];
 
-    }
+    spyOn(m, 'getVideoByText').and.returnValue($q.when(result));
+    spyOn(sut, '__read');
 
-    spyOn(movieService, 'getVideoByText').andReturn($q.when());
+    sut.getVideo('va');
+    $timeout.flush();
+
+    expect(sut.__read).toHaveBeenCalledWith(result);
   })
 });
