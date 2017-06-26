@@ -1,5 +1,5 @@
 import SearchBarController from './search-bar-controller';
-
+import movieService from '../movies-list/movies-list-service';
 
 describe('Search Bar Controller', () => {
   const sut = new SearchBarController();
@@ -12,7 +12,11 @@ describe('Search Bar Controller', () => {
     expect(sut.searchText).toEqual('');
   });
 
-  //it('#', () => {
-    //movieService.getVideoByText.and.returnValue($q.when({data: {result: ‘some_result’}))
-  //})
+  it('#getVideo', () => {
+    const result = {
+
+    }
+
+    spyOn(movieService, 'getVideoByText').andReturn($q.when());
+  })
 });

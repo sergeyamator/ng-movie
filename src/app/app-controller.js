@@ -1,11 +1,9 @@
-export default function () {
-  const vm = this;
-
-  Object.assign(vm, {
-  });
-
-  vm.title = 'Find movie';
-
-  vm.searchText = '';
-  vm.movies = 'a';
+class App {
+  constructor() {
+      this.title = 'Find movie';
+      this.searchText = '';
+      this.movies = 'a';
+  }
 }
+
+export default App;

@@ -17,20 +17,21 @@ class SearchBar {
   getVideo(text) {
     this.movie.getVideoByText(text)
       .then((movies) => {
-        this.movies = movies;
+        this.read(movies);
       });
   }
 
-  // TODO
-  /*  read(value) {
-   this.movies = value.map(v => {
-   return {
-   name: v.title || v.name,
-   src: v.src,
-   id: 'id',
-   };
-   });
-   }*/
+    read(value) {
+        this.movies = value.map(v => {
+            return {
+                name: v.name || v.title,
+                src: 'http://image.tmdb.org/t/p/w185' + v.poster_path,
+                id: v.id,
+                date: v.first_air_date,
+                stars: v.vote_average
+            };
+        });
+    }
 }
 
 export default SearchBar;

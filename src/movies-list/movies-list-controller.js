@@ -1,18 +1,13 @@
-export default function () {
-  const vm = this;
+class MovieList {
+    getStarsArray(num) {
+        const starsArray = [];
+        num = Math.round(num);
 
-  Object.assign(vm, {
-    getStarsArray,
-  });
+        for (let i = 1; i <= num; i++) {
+            starsArray.push(i);
+        }
 
-  function getStarsArray(num) {
-    const starsArray = [];
-    num = Math.round(num);
-
-    for (let i = 1; i <= num; i++) {
-      starsArray.push(i);
+        return starsArray;
     }
-
-    return starsArray;
-  }
 }
+export default MovieList;

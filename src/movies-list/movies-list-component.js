@@ -1,12 +1,11 @@
 import app from '../app/app-module';
-import MoviesController from './movies-list-controller';
+import MoviesCtrl from './movies-list-controller';
 import './movies-list-service';
 
 import './movies-list.css';
 
 app.component('moviesList', {
-  controller: MoviesController,
-  controllerAs: 'MoviesController',
+  controller: MoviesCtrl,
   templateUrl: 'src/movies-list/movies-list.html',
   bindings: {
     movies: '=',

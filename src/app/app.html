@@ -1,8 +1,8 @@
 <div class="movies">
-    <h1 class="text-center">{{AppController.title}}</h1>
+    <h1 class="text-center">{{$ctrl.title}}</h1>
     <search-bar
-        search-text="AppController.searchText"
-        movies="AppController.movies"
+        search-text="$ctrl.searchText"
+        movies="$ctrl.movies"
     ></search-bar>
-    <movies-list movies="AppController.movies"></movies-list>
+    <movies-list movies="$ctrl.movies"></movies-list>
 </div>
