@@ -1,7 +1,7 @@
 import config from '../config';
-import appModule from '../app/app-module';
+import movieModule from './movie-module';
 
-appModule.service('movie', movie);
+movieModule.service('movie', movie);
 
 export default function movie($http) {
   this.getVideoByText = getVideoByText;
@@ -12,16 +12,14 @@ export default function movie($http) {
       return;
     }
 
-    if(text === 'vampire') {
-      debugger
-    }
-
     return $http.get(config.searchMovieUrl + text)
       .then(r => r.data.results);
   }
 
   function getVideoById(id) {
-    return $http.get(`${config.baseMovieUrl}${id}${config.queryMovieId}`)
+    const getVideoByIdUrl = `${config.baseMovieUrl}${config.queryMovieById}${id}${config.apiKey}`;
+
+    return $http.get(getVideoByIdUrl)
       .then(r => r.data);
   }
 }

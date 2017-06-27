@@ -1,4 +1,4 @@
-import movie from '../movies-list/movies-list-service';
+import movie from '../movies-list-service';
 
 class Movie {
   static get $inject() {
