@@ -1,3 +1,18 @@
 <article>
-hi
+  <h2>{{$ctrl.movie.title}}</h2>
+  <date>{{$ctrl.movie.date}}</date>
+  <div>{{$ctrl.movie.country}}</div>
+  <div>{{$ctrl.movie.imgSrc}}</div>
+  <div>{{$ctrl.movie.homepageUrl}}</div>
+  <div>{{$ctrl.movie.language}}</div>
+  <div>{{$ctrl.movie.numberOfEpisodes}}</div>
+  <div>{{$ctrl.movie.number_of_seasons}}</div>
+  <div>{{$ctrl.movie.overview}}</div>
+  <div>{{$ctrl.movie.popularity}}</div>
+  <ul>
+    <li ng-repeat="genre in $ctrl.movie.genres">
+      {{genre}}
+    </li>
+  </ul>
+
 </article>
