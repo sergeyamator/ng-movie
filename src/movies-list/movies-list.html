@@ -5,14 +5,16 @@
         class="movie"
         ng-repeat="movie in $ctrl.movies track by movie.id"
       >
-        <img ng-src="{{movie.src}}" alt="">
-        <h2>{{movie.name}}</h2>
-        <div>{{movie.date | date : 'yyyy'}}</div>
-        <ul class="stars">
-          <li class="glyphicon glyphicon-star"
-              ng-repeat="star in $ctrl.getStarsArray(movie.stars)">
-          </li>
-        </ul>
+        <a ui-sref="movie({movieId: movie.id})">
+          <div class="movie-poster"><img ng-src="{{movie.src}}" alt=""></div>
+          <h2>{{movie.name}}</h2>
+          <div>{{movie.date | date : 'yyyy'}}</div>
+          <ul class="stars">
+            <li class="glyphicon glyphicon-star"
+                ng-repeat="star in $ctrl.getStarsArray(movie.stars)">
+            </li>
+          </ul>
+        </a>
       </article>
     </div>
   </div>

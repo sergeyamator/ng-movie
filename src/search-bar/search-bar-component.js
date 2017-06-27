@@ -1,8 +1,7 @@
 import app from '../app/app-component';
 
-import './search-bar.css';
-
 import SearchBarCtrl from './search-bar-controller';
+import './search-bar.css';
 
 app.component('searchBar', {
   controller: SearchBarCtrl,

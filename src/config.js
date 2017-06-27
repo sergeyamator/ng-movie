@@ -1,3 +1,10 @@
+const apiKey = '3d34828e5c71c80272fde06fbd627191';
+
+
 export default {
-  movieApiUrl: 'https://api.themoviedb.org/3/search/multi?api_key=3d34828e5c71c80272fde06fbd627191&query=',
+  searchMovieUrl: `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=`,
+  baseMovieUrl: 'https://api.themoviedb.org/3/movie/',
+  queryMovieId: `?api_key=${apiKey}`,
+  noImageSrc: 'http://babakunyho.eu/img/default-no-image.png',
+  imageSrc: 'http://image.tmdb.org/t/p/w185',
 };

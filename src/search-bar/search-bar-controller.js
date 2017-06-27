@@ -1,4 +1,4 @@
-import './search-bar.css';
+import config from '../config';
 
 class SearchBar {
   static get $inject() {
@@ -15,23 +15,28 @@ class SearchBar {
   }
 
   getVideo(text) {
+    if (!text) {
+      this.movies = '';
+      return;
+    }
+
     this.movie.getVideoByText(text)
       .then((movies) => {
         this.__read(movies);
       });
   }
 
-    __read(value) {
-        this.movies = value.map(v => {
-            return {
-                name: v.name || v.title,
-                src: 'http://image.tmdb.org/t/p/w185' + v.poster_path,
-                id: v.id,
-                date: v.first_air_date,
-                stars: v.vote_average
-            };
-        });
-    }
+  __read(value) {
+    this.movies = value.map(v => {
+      return {
+        name: v.name || v.title || 'no title',
+        src: v.poster_path ? config.imageSrc + v.poster_path : config.noImageSrc,
+        id: v.id,
+        date: v.first_air_date,
+        stars: v.vote_average,
+      };
+    });
+  }
 }
 
 export default SearchBar;

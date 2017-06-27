@@ -2,8 +2,8 @@ import SearchBarController from './search-bar-controller';
 import movieService from '../movies-list/movies-list-service';
 
 describe('Search Bar Controller', () => {
-  const m = new movieService();
-  const sut = new SearchBarController(m);
+  const service = new movieService();
+  const sut = new SearchBarController(service);
   let $q;
   let $timeout;
 
@@ -22,12 +22,16 @@ describe('Search Bar Controller', () => {
   it('#getVideo', () => {
     const result = [];
 
-    spyOn(m, 'getVideoByText').and.returnValue($q.when(result));
+    spyOn(service, 'getVideoByText').and.returnValue($q.when(result));
     spyOn(sut, '__read');
 
     sut.getVideo('va');
     $timeout.flush();
 
     expect(sut.__read).toHaveBeenCalledWith(result);
-  })
+  });
+
+  it('should map data for view from original data', () => {
+
+  });
 });
