@@ -1,5 +1,3 @@
-import movie from '../movies-list-service';
-
 class Movie {
   static get $inject() {
     return ['$stateParams', 'movie'];

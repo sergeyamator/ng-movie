@@ -7,7 +7,7 @@ app.config(($stateProvider, $urlRouterProvider) => {
       template: '<home></home>',
     })
     .state('movie', {
-      url: "/movie/:movieId",
+      url: '/movie/:movieId',
       template: '<movie></movie>',
     });
 

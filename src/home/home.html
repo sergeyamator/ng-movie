@@ -1,8 +1,5 @@
 <div class="movies">
     <h1 class="text-center">{{$ctrl.title}}</h1>
-    <search-bar
-        search-text="$ctrl.searchText"
-        movies="$ctrl.movies"
-    ></search-bar>
-    <movies-list movies="$ctrl.movies"></movies-list>
+    <search-bar search-text="$ctrl.searchText" on-change-text="$ctrl.onChangeText(text)"></search-bar>
+    <movies-list movies="$ctrl.moviesForRender"></movies-list>
 </div>

@@ -7,7 +7,7 @@ app.component('searchBar', {
   controller: SearchBarCtrl,
   templateUrl: 'src/search-bar/search-bar.html',
   bindings: {
-    searchText: '=',
-    movies: '=',
+    searchText: '<',
+    onChangeText: '&',
   },
 });

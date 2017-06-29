@@ -6,13 +6,13 @@
                     class="form-control"
                     placeholder="Enter you movie here"
                     ng-model="$ctrl.searchText"
-                    ng-change="$ctrl.getVideo($ctrl.searchText)"
+                    ng-change="$ctrl.onChangeSearchText()"
                 >
             </div>
             <div class="col-md-2">
                 <button
                     type="reset"
-                    ng-click="$ctrl.clearSearchText()"
+                    ng-click="$ctrl.onChangeSearchText('clearText')"
                     class="btn btn-default">
                     Clear
                 </button>
